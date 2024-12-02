@@ -11,9 +11,7 @@ services:
             - PGID=0
             - UMASK=022
         restart: unless-stopped
-  tunnel:
-    restart: always
-    image: cloudflare/cloudflared
-    command: tunnel run
-    environment:
-      - TUNNEL_TOKEN=トンネル作成の時に控えたトークン
+    tunnel:
+        restart: always
+        image: cloudflare/cloudflared
+        command: tunnel run
