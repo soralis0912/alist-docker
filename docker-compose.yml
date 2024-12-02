@@ -4,8 +4,6 @@ services:
         container_name: alist
         volumes:
             - ./data/:/opt/alist/data
-        ports:
-            - '5244:5244'
         environment:
             - PUID=0
             - PGID=0
